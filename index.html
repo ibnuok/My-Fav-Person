@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine 💖</title>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  overflow:hidden;
+  font-family:'Poppins',sans-serif;
+}
+
+/* ================= PAGE ================= */
+
+.page{
+  width:100%;
+  height:100vh;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.page.active{
+  display:flex;
+}
+
+/* ================= BACKGROUND LOVE ================= */
+
+.bg-love{
+  position:absolute;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  z-index:0;
+}
+
+.bg-love span{
+  position:absolute;
+  font-size:22px;
+  animation:fall linear infinite;
+  opacity:0.7;
+}
+
+@keyframes fall{
+  from{
+    transform:translateY(-10vh);
+    opacity:0;
+  }
+  to{
+    transform:translateY(110vh);
+    opacity:1;
+  }
+}
+
+/* ================= CARD ================= */
+
+.card{
+  background:rgba(255,255,255,0.95);
+  padding:30px 25px;
+  border-radius:20px;
+  width:90%;
+  max-width:350px;
+  text-align:center;
+  z-index:5;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  animation:fadeUp 1s ease;
+}
+
+/* ================= PAGE 1 ================= */
+
+#page1{
+  background:linear-gradient(135deg,#ff9aa2,#ff6f91);
+}
+
+#page1 h1{
+  font-family:'Great Vibes',cursive;
+  font-size:3rem;
+  color:#ff4d6d;
+  margin-bottom:10px;
+}
+
+#page1 h2{
+  font-size:1.1rem;
+  margin-bottom:25px;
+  color:#555;
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
+  padding:10px 25px;
+  background:#ff4d6d;
+  border:none;
+  color:white;
+  border-radius:25px;
+  cursor:pointer;
+  font-size:1rem;
+  transition:0.3s;
+  margin:5px;
+}
+
+.btn:hover{
+  background:#ff2f57;
+  transform:scale(1.05);
+}
+
+/* ================= PAGE 2 (LOVE BLOOM) ================= */
+
+#page2{
+  background:linear-gradient(135deg,#ffb7c5,#ff8fab);
+}
+
+.love-bloom{
+  position:relative;
+  width:150px;
+  height:150px;
+  margin:20px auto;
+}
+
+.love{
+  position:absolute;
+  font-size:28px;
+  opacity:0;
+  animation:bloom 3s infinite;
+}
+
+.l1{top:0;left:60px;animation-delay:0s;}
+.l2{top:40px;left:0;animation-delay:.3s;}
+.l3{top:40px;right:0;animation-delay:.6s;}
+.l4{bottom:0;left:60px;animation-delay:.9s;}
+.l5{top:20px;left:20px;animation-delay:1.2s;}
+.l6{top:20px;right:20px;animation-delay:1.5s;}
+
+@keyframes bloom{
+  0%{transform:scale(0);opacity:0;}
+  50%{transform:scale(1.5);opacity:1;}
+  100%{transform:scale(1);opacity:0;}
+}
+
+/* ================= PAGE 3 (BIG FLOWER) ================= */
+
+#page3{
+  background:linear-gradient(135deg,#ff6f91,#ff4d6d);
+}
+
+.big-flower{
+  position:relative;
+  width:220px;
+  height:220px;
+  margin:20px auto;
+  animation:rise 3s ease forwards;
+}
+
+.big-petal{
+  position:absolute;
+  width:80px;
+  height:80px;
+  background:#ffc0cb;
+  border-radius:50%;
+}
+
+.big-center{
+  position:absolute;
+  width:60px;
+  height:60px;
+  background:gold;
+  border-radius:50%;
+  top:80px;
+  left:80px;
+}
+
+/* Kelopak */
+.bp1{top:0;left:70px;}
+.bp2{top:70px;left:0;}
+.bp3{top:70px;right:0;}
+.bp4{bottom:0;left:70px;}
+.bp5{top:15px;left:15px;}
+.bp6{top:15px;right:15px;}
+.bp7{bottom:15px;left:15px;}
+.bp8{bottom:15px;right:15px;}
+
+@keyframes rise{
+  from{
+    transform:translateY(300px) scale(0.3);
+    opacity:0;
+  }
+  to{
+    transform:translateY(0) scale(1);
+    opacity:1;
+  }
+}
+
+/* ================= ANIMASI ================= */
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:400px){
+
+  #page1 h1{font-size:2.5rem;}
+  .big-flower{width:180px;height:180px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND LOVE -->
+<div class="bg-love" id="bg"></div>
+
+
+<!-- ========== PAGE 1 ========= -->
+<div id="page1" class="page active">
+
+  <div class="card">
+
+    <h1>Happy Valentine 💖</h1>
+    <h2>My Fav Person “Sabrina”</h2>
+
+    <button class="btn" onclick="toPage2()">Buka 💌</button>
+
+  </div>
+
+</div>
+
+
+<!-- ========== PAGE 2 ========= -->
+<div id="page2" class="page">
+
+  <div class="card">
+
+    <h2>Untuk Kamu ❤️</h2>
+
+    <div class="love-bloom">
+      <div class="love l1">❤️</div>
+      <div class="love l2">💖</div>
+      <div class="love l3">💘</div>
+      <div class="love l4">❤️</div>
+      <div class="love l5">💕</div>
+      <div class="love l6">💗</div>
+    </div>
+
+    <p>
+      Kamu selalu bikin aku jatuh cinta lagi dan lagi 💕
+    </p>
+
+    <button class="btn" onclick="toPage3()">Next ➡️</button>
+    <button class="btn" onclick="back1()">⬅ Back</button>
+
+  </div>
+
+</div>
+
+
+<!-- ========== PAGE 3 ========= -->
+<div id="page3" class="page">
+
+  <div class="card">
+
+    <h2>Buat Kamu 🌸</h2>
+
+    <div id="flowerBox"></div>
+
+    <p>
+      Seperti bunga ini, cintaku tumbuh setiap hari 💖
+    </p>
+
+    <button class="btn" onclick="back2()">⬅ Back</button>
+
+  </div>
+
+</div>
+
+
+<script>
+
+/* ================= BACKGROUND LOVE ================= */
+
+const bg = document.getElementById("bg");
+
+for(let i=0;i<30;i++){
+
+  const span=document.createElement("span");
+
+  span.innerHTML="💗";
+
+  span.style.left=Math.random()*100+"vw";
+  span.style.animationDuration=5+Math.random()*5+"s";
+  span.style.fontSize=15+Math.random()*15+"px";
+
+  bg.appendChild(span);
+}
+
+/* ================= NAVIGATION ================= */
+
+const page1=document.getElementById("page1");
+const page2=document.getElementById("page2");
+const page3=document.getElementById("page3");
+
+function hideAll(){
+  page1.classList.remove("active");
+  page2.classList.remove("active");
+  page3.classList.remove("active");
+}
+
+function toPage2(){
+  hideAll();
+  page2.classList.add("active");
+}
+
+function toPage3(){
+  hideAll();
+  page3.classList.add("active");
+  createFlower();
+}
+
+function back1(){
+  hideAll();
+  page1.classList.add("active");
+}
+
+function back2(){
+  hideAll();
+  page2.classList.add("active");
+}
+
+/* ================= BIG FLOWER ================= */
+
+function createFlower(){
+
+  const box=document.getElementById("flowerBox");
+  box.innerHTML="";
+
+  const flower=document.createElement("div");
+  flower.className="big-flower";
+
+  flower.innerHTML=`
+    <div class="big-petal bp1"></div>
+    <div class="big-petal bp2"></div>
+    <div class="big-petal bp3"></div>
+    <div class="big-petal bp4"></div>
+    <div class="big-petal bp5"></div>
+    <div class="big-petal bp6"></div>
+    <div class="big-petal bp7"></div>
+    <div class="big-petal bp8"></div>
+    <div class="big-center"></div>
+  `;
+
+  box.appendChild(flower);
+}
+
+</script>
+
+</body>
+</html>
