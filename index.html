@@ -1,88 +1,56 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Valentine Sabrina🤍</title>
+    <title>happy valentine day sabrina</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #ffe6e6;
+            background-color: #ffccdd;
             font-family: Arial, sans-serif;
+            text-align: center;
         }
         h1 {
-            color: #ff4d4d;
+            color: #ff3366;
+            font-size: 2.5em;
+            margin-top: 50px;
         }
-        button {
-            padding: 10px 20px;
-            background-color: #ff99cc;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 5px;
-        }
-        #message {
-            display: none;
+        h2 {
+            color: #ff6699;
+            font-size: 1.5em;
             margin-top: 20px;
-            font-size: 1.2em;
-            color: #ff4d4d;
         }
         .heart {
             position: relative;
-            display: inline-block;
-            height: 100px;
             width: 100px;
-            animation: bounce 2s infinite;
+            height: 100px;
+            background: #ff3366;
+            transform: rotate(-45deg);
+            margin: 20px auto;
         }
-        .heart:before,
-        .heart:after {
+        .heart:before, .heart:after {
             content: "";
+            background: #ff3366;
+            border-radius: 50%;
             position: absolute;
-            top: 0;
-            width: 50px;
-            height: 80px;
-            border-radius: 50px 50px 0 0;
-            background: #ff4d4d;
         }
         .heart:before {
-            left: 50px;
-            transform: rotate(-45deg);
+            width: 100px;
+            height: 100px;
+            top: -50px;
+            left: 0;
         }
         .heart:after {
-            left: 0;
-            transform: rotate(45deg);
-        }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-30px);
-            }
-            60% {
-                transform: translateY(-15px);
-            }
+            width: 100px;
+            height: 100px;
+            left: 50px;
+            top: 0;
         }
     </style>
 </head>
 <body>
-    <h1>Happy Valentine Sabrina🤍</h1>
+    <h1>happy valentine day sabrina</h1>
+    <h2>for u my fav person</h2>
     <div class="heart"></div>
-    <button id="swipeButton">Geser ya</button>
-    <div id="message">my fav person</div>
-    <button id="clickButton">Klik ya</button>
-
-    <script>
-        document.getElementById('swipeButton').addEventListener('click', function() {
-            document.getElementById('message').style.display = 'block';
-        });
-        document.getElementById('clickButton').addEventListener('click', function() {
-            alert('i love you more, my bidadari');
-        });
-    </script>
 </body>
 </html>
